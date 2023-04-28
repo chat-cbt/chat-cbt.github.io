@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 offset-lg-2 col-lg-8" id="quiz">
+        <div id="scoreboard" class="text-right"></div>
+        <div class="card mb-3">
+          <div class="card-body" id="question-container"></div> <!-- 문제 카드 -->
+        </div>
+        <div class="card mb-3">
+          <div class="card-body" id="answer-container"></div> <!-- 보기 카드 -->
+        </div>
+        <button id="next" class="btn btn-primary mt-4" style="display:none">다음</button>
+        <button id="submit" class="btn btn-success mt-4" style="display:none">제출</button>
+<input type="number" id="gotoQuestion" class="mt-4" min="1" max="${numberOfQuestionsToAnswer}" placeholder="문제 번호">
+<button id="gotoButton" class="btn btn-secondary mt-4">이동</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 offset-lg-2 col-lg-8" id="results"></div> <!-- 결과 영역 추가 -->
+    </div>
+  </div>
+  <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* 기본 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* 퀴즈 스타일 */
+#quiz {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+#quiz .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+#quiz .card-body button {
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
+
+.question {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  flex-direction: column;
+}
+.answer {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.answer:hover {
+  background-color: #e9ecef;
+}
+
+.answer.selected {
+  background-color: #4e73df;
+  border-color: #4e73df;
+  color: #fff;
+}
+.check-answer,
+#submit {
+  background-color: #4e73df;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.check-answer:hover,
+
+#submit:hover {
+  background-color: #2e59d9;
+}
+#results {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#scoreboard {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .answers {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .answer {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
